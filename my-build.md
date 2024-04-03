@@ -74,6 +74,58 @@ npx tsc
 {"zipcode":"12345","weather":"sunny","temp":35}
 ```
 
+## ch05
+
+```
+mkdir 05-next
+cd 05-next
+npx create-next-app@latest --typescript --use-npm .
+npm run dev
+
 ```
 
+### http://localhost:3000/hello
+
+### Server-Side Rendering http://localhost:3000/names-ssr
+
+### Static Site Generation(Incremental Static Regeneration) http://localhost:3000/names-ssg
+
+### Client-Side Rendering http://localhost:3000/names-csr
+
+## ch06
+
+```
+cd 06-graphql
+npx create-next-app@latest --typescript --use-npm .
+npm install @apollo/server @as-integrations/next graphql graphql-tag
+[add graphql folder and some files]
+npm run dev
+
+```
+
+### Apollo Server http://localhost:3000/api/graphql
+
+```
+[Operation]
+query Weather($zip: String) {
+  weather(zip:$zip) {
+    zip
+    weather
+  }
+}
+[Variables]
+{
+  "zip":"96826"
+}
+[Response]
+{
+  "data": {
+    "weather": [
+      {
+        "zip": "96826",
+        "weather": "sunny"
+      }
+    ]
+  }
+}
 ```

@@ -3,7 +3,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const folder = 'ch05'
+const folder = 'ch06'
 // list all files in folder
 // filter only extension is .txt
 const files = fs.readdirSync(path.join(__dirname, folder)).filter((file) => file.endsWith('.txt'))
